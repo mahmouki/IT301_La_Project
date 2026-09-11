@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exploring HTML Tags</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="top">
+
+<header>
+    <h1>Exploring HTML Tags</h1>
+    <p>IT 301 Labs and Projects</p>
+</header>
+
+<nav>
+    <h2>Navigation links:</h2>
+    <ul>
+        <li><a href="#labone">Lab one materials</a></li>
+        <li><a href="#labtwo">Lab two materials</a></li>
+        <li><a href="#labfour">Lab four materials</a></li>
+        <li><a href="#aboutme">About me</a></li>
+    </ul>
+</nav>
+
+<main>
+    <section>
+        <h2>Previous Labs</h2>
+        <ol>
+            <li>Lab 1: My First Page</li>
+            <li>Lab 2: Semantics</li>
+            <li>Lab 3: Nested List</li>
+            <li>Lab 4: Styling with CSS</li>
+        </ol>
+    </section>
+
+    <section id="labone">
+        <h2>This is lab one</h2>
+        <h3>This is the second header</h3>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. This section
+            contains material from my first HTML lab.
+        </p>
+
+        <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRr5ZDcF57TXfWTtFSGaH-8pCWexvJ1it-D1n0_aTre6Q&s=10"
+            alt="Side eye corgi"
+        >
+        <aside>A side eye-ing corgi for your troubles</aside>
+    </section>
+
+    <section id="labtwo">
+        <h2>Lab Two materials</h2>
+        <p>
+            Lab Two focused on semantic HTML and organizing a webpage using
+            elements such as header, nav, main, section, article, aside, and footer.
+        </p>
+
+        <article>
+            <p>
+                Semantic HTML makes the structure of a webpage easier to understand.
+            </p>
+        </article>
+    </section>
+
+    <section id="labfour">
+        <h2>Lab Four: Styling with CSS</h2>
+        <p>
+            This page uses an external CSS file to style the website. The required
+            properties are demonstrated below without changing the basic design.
+        </p>
+
+        <div class="css-demo">
+            <p class="color-example">This demonstrates <strong>color</strong>.</p>
+
+            <p class="background-example">
+                This demonstrates <strong>background-color</strong>.
+            </p>
+
+            <p class="border-example">
+                This demonstrates <strong>border</strong>.
+            </p>
+
+            <p class="shadow-example">
+                This demonstrates <strong>box-shadow</strong>.
+            </p>
+
+            <p class="radius-example">
+                This demonstrates <strong>border-radius</strong>.
+            </p>
+
+            <p class="padding-example">
+                This demonstrates <strong>padding</strong>.
+            </p>
+
+            <p class="font-size-example">
+                This demonstrates <strong>font-size</strong> and <strong>font-weight</strong>.
+            </p>
+
+            <p class="text-align-example">
+                This demonstrates <strong>text-align</strong>.
+            </p>
+
+            <p>
+                <a class="decoration-example" href="#top">
+                    This demonstrates <strong>text-decoration</strong>.
+                </a>
+            </p>
+
+            <ul class="list-example">
+                <li>This demonstrates <strong>list-style-type</strong>.</li>
+                <li>Another list item.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="aboutme">
+        <h2>About me:</h2>
+        <p>
+            Hi! My name is Kamal, I am an IT student at JMU! I play in the pep band,
+            hang out with friends, and I am part of the
+            <a href="https://www.jmu.edu/mrd/index.shtml">Marching Royal Dukes!</a>
+        </p>
+
+        <p>
+            I spend a lot of my free time playing games with friends, currently I am
+            playing <a href="https://www.minecraft.net/en-us">Minecraft!</a>
+        </p>
+
+        <article>
+            Minecraft is a retro-style block game, where you can build whatever you can think!
+        </article>
+    </section>
+</main>
+
+<footer>
+    <p>Thank you for reading! Click <a href="#top">Here</a> to return to the top!</p>
+</footer>
+
+</body>
+</html>
