@@ -1,0 +1,133 @@
+* {
+    padding: 10px;
+    margin: 0;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    color: #333333;
+    background-color: #f5f5f5;
+}
+
+header {
+    color: royalblue;
+    background-color: white;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px #cccccc;
+    text-align: center;
+}
+
+section {
+    margin: 20px 0;
+    background-color: white;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px #dddddd;
+}
+
+ul {
+    padding-left: 40px;
+    list-style-type: disc;
+}
+
+ol {
+    padding-left: 40px;
+}
+
+h1,
+h2 {
+    color: royalblue;
+}
+
+h1 {
+    font-size: 28px;
+}
+
+h2 {
+    font-size: 22px;
+}
+
+p {
+    font-size: 16px;
+}
+
+a {
+    color: royalblue;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: darkblue;
+}
+
+img {
+    border: 2px solid #cccccc;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px #cccccc;
+}
+
+aside {
+    text-align: center;
+    font-size: 14px;
+}
+
+article {
+    background-color: #eeeeee;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+}
+
+/* Lab 4 properties */
+
+.labfour {
+    padding: 15px;
+}
+
+.color-example {
+    color: forestgreen;
+}
+
+.background-example {
+    background-color: lightgray;
+}
+
+.border-example {
+    border: 2px solid royalblue;
+}
+
+.shadow-example {
+    box-shadow: 3px 3px 5px #bbbbbb;
+}
+
+.radius-example {
+    border-radius: 8px;
+}
+
+.padding-example {
+    padding: 20px;
+}
+
+.extra-example {
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.decoration-example {
+    text-decoration: underline;
+}
+
+.list-example {
+    list-style-type: circle;
+}
+
+footer {
+    margin-top: 20px;
+    background-color: white;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px #dddddd;
+}
