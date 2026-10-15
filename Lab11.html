@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            background-color: blue;
+            color: white;
+            font-size: 1.2em;
+            width: 200px;
+            padding: 3px;
+            text-align: center;
+
+        }
+        #spacer{
+            height: 75vh;
+        }
+    </style>
+</head>
+<body>
+    <div id = "box">Click Me! &#128512;</div>
+    <div id = "spacer"></div>
+    <script>
+        const box = document.getElementById('box');
+        function myFunction(event){
+            box.style.backgroundColor = 'red';
+            const targetDiv = document.getElementById('box');
+            targetDiv.innerHTML = 'Ouch! &#129298';
+
+        }
+
+        function dbClick(event){
+            box.style.backgroundColor = 'pink';
+            const targetDiv = document.getElementById('box');
+            targetDiv.innerHTML = 'Double Trouble! &#129321';
+
+        }
+
+        function mouseLeave(event){
+            box.style.backgroundColor = 'lightgreen';
+            const targetDiv = document.getElementById('box');
+            targetDiv.innerHTML = 'Phew! &#128524';
+
+        }
+
+        function mouseMove(event){
+            box.style.backgroundColor = 'skyblue';
+            const targetDiv = document.getElementById('box');
+            targetDiv.innerHTML = 'I see you! &#128064';
+
+        }
+        function mOver(event){
+            box.style.backgroundColor = 'yellow';
+
+            const targetDiv = document.getElementById('box');
+            targetDiv.innerHTML = 'Do Not Click! &#128544';
+            
+
+        }
+        box.addEventListener('click', myFunction);
+
+        box.addEventListener('mouseover', mOver);
+
+        box.addEventListener('dblclick', dbClick);
+
+        box.addEventListener('mouseleave', mouseLeave);
+
+        spacer.addEventListener('mousemove', mouseMove);
+
+
+        
+
+        
+    </script>>
+
+
+
+</body>
+</html>
