@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="#">
+        <label for="name">What is your name?</label>
+        <input type="text" id="greetname"> <br>
+        <button id="bout" type="button">Submit</button>
+    </form>
+    <p id="greetingDisplay"></p>
+
+    <form action="#">
+        <label for="grade">What is your first number?</label>
+        <input type="number" id="numOne"> <br>
+        <label for="grade">What is your second number?</label>
+        <input type="number" id="numTwo"> 
+
+    </form>
+
+    <p>Select your operation</p>
+    <form action="#">
+        <input type="radio" name = 'op' value = 'add'>Addition <br>
+        <input type="radio" name = 'op' value = 'subt'>Subtraction <br>
+        <input type="radio" name = 'op' value = 'divider'>Division <br>
+        <input type="radio" name = 'op' value = 'mult'>Multiplication <br><br>
+
+        <button id="bttn" type="button">Calculate</button>
+        <br>
+        <button id="clearBttn" type="button">Clear</button>
+
+    </form>
+
+    <h3>Result: </h3>
+    <p id="result"></p>
+   
+    <script>
+         const greetname = document.getElementById('greetname');
+        const greetingDisplay = document.getElementById('greetingDisplay');
+        const numOne = document.getElementById('numOne');
+        const numTwo = document.getElementById('numTwo');
+        const resultDisplay = document.getElementById('result');
+        
+        const nameBtn = document.getElementById('bout');
+        const calcBtn = document.getElementById('bttn');
+        const clearBtn = document.getElementById('clearBttn');
+        const calcForm = document.getElementById('calcForm');
+        const opForm = document.getElementById('opForm');
+
+
+
+        nameBtn.addEventListener('click', function() {
+    const nameVal = greetname.value.trim();
+        if (nameVal) {
+        greetingDisplay.textContent = `Welcome ${nameVal}!`;
+    }
+    });
+        
+    calcBtn.addEventListener('click', function() {
+    const a = parseFloat(numOne.value);
+    const b = parseFloat(numTwo.value);
+    const selectedOp = document.querySelector('[name="op"]:checked');
+
+    if (isNaN(a) || isNaN(b)) {
+        resultDisplay.textContent = 'Please enter both numbers.';
+        return;
+    }
+
+    if (!selectedOp) {
+        resultDisplay.textContent = 'Please select an operation.';
+        return;
+    }
+
+    const operations = {
+        add: () => a + b,
+        subt: () => a - b,
+        mult: () => a * b,
+        divider: () => b !== 0 ? a / b : 'Cannot divide by zero'
+    };
+
+    
+    const operationName = selectedOp.value;
+    const finalResult = operations[operationName]();
+    resultDisplay.textContent = finalResult; 
+}); 
+
+clearBtn.addEventListener('click', function() {
+        greetname.value = '';
+        numOne.value = '';
+        numTwo.value = '';
+
+        
+        greetingDisplay.textContent = '';
+        resultDisplay.textContent = '';
+
+       
+        const allRadios = document.querySelectorAll('[name="op"]');
+        allRadios.forEach(radio => radio.checked = false);
+    });
+    </script>
+
+
+</body>
+</html>
