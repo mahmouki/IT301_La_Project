@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise , fetch, and API</title>
+    <style>
+        .profile-card {
+            border: 1px solid gray;
+            border-radius: 8px;
+            padding: 16px;
+            max-width: 280px;
+            margin-top: 15px;
+            font-family: sans-serif;
+            text-align: center;
+            box-shadow: 0 4px 6px black;
+        }
+        .profile-card img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h3>Welcome to my random user website</h3>
+    <script>
+       //create a promise
+        /* const p = new Promise((resolve, reject)=>{
+            const grade = 90;
+            if (grade > 50){resolve('Pass the class.......');
+
+
+            }
+            else {reject('Fail the class');}
+
+        }); */
+
+        //consume the promise
+        /* p.then(success=>console.log(success)).catch(reason=>console.log(reason)).finally()=>console.log('Done.''));
+        p.catch(reason=>console.log(reason)); */
+      /*   const checkgrade = async()=>{
+            try{
+                //handle fulfilled state
+                const result = await p;
+                console.log(result);
+            }catch{
+                console.log(reason);
+                //hande the fail state
+            }
+        }
+        console.log(checkgrade) */ 
+const site ='https://randomuser.me/api/';
+
+let cardDiv = document.createElement('div');
+cardDiv.className = 'profile-card';
+
+let img = document.createElement('img');
+let bttn = document.createElement('button');
+bttn.type = 'button';
+bttn.textContent = 'Generate Profile'; 
+let form = document.createElement('form');
+form.action = '#';
+form.appendChild(bttn);
+document.body.appendChild(form);
+
+let nameP = document.createElement('p');
+let emailP = document.createElement('p');
+let phoneP = document.createElement('p');
+
+const getImg = async()=>{
+    try{
+        let response = await fetch(site); 
+        if (!response.ok) {throw new Error('Response Status')}; 
+        
+        let result = await response.json(); 
+        let user = result.results[0]; 
+
+        img.src = user.picture.large; 
+        img.alt = 'User Profile';
+        nameP.textContent = `Name: ${user.name.first} ${user.name.last}`;
+        emailP.textContent = `Email: ${user.email}`;
+        phoneP.textContent = `Phone: ${user.phone}`;
+        
+        cardDiv.appendChild(img);
+        cardDiv.appendChild(nameP);
+        cardDiv.appendChild(emailP);
+        cardDiv.appendChild(phoneP);
+        document.body.appendChild(cardDiv);
+
+    }catch(reason){ console.log(reason); }} 
+    bttn.addEventListener('click', getImg);
+
+    </script>
+    
+</body>
+</html>
